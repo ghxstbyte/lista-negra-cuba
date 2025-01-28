@@ -82,6 +82,9 @@ public class MainActivity extends AppCompatActivity {
 
         // btn search
         binding.btnSearch.setOnClickListener(this::openKeyboard);
+
+        // about
+        binding.about.setOnClickListener(v -> startActivity(new Intent(this, AboutActivity.class)));
     }
 
     private void getDataUser() {

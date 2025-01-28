@@ -3,4 +3,19 @@
     <string name="app_name">Lista Negra Cubana</string>
     <string name="disclaimer"><b>Aclaración Importante:</b>\nEsta aplicación es una plataforma independiente y no está afiliada, asociada ni respaldada de ninguna manera por ETECSA (Empresa de Telecomunicaciones de Cuba S.A.) ni por ninguna entidad bancaria. Somos un espacio comunitario donde recopilamos y organizamos los reportes proporcionados por los usuarios. La información presentada se basa en experiencias y observaciones de la comunidad y no debe interpretarse como información oficial de ETECSA o cualquier entidad bancaria involucrada. Asimismo, queremos aclarar que no nos hacemos responsables si un número de teléfono o tarjeta bancaria ha sido reportado previamente por estafa u otras acciones fraudulentas en esta o en otras plataformas. La responsabilidad de verificar la reputación y fiabilidad de otros usuarios recae en cada individuo. Esta plataforma se nutre de los reportes proporcionados por la comunidad de usuarios cubanos en redes sociales. Es importante tener en cuenta que, a pesar de nuestros esfuerzos por mantener un entorno confiable y preciso, existe la posibilidad de que se publiquen reportes inexactos, incompletos o incluso malintencionados. Sabemos que algunos usuarios pueden hacer reportes de manera fraudulenta o injusta, ya sea por error o con la intención de perjudicar a otros. Aunque nuestro equipo de moderación trabaja diligentemente para revisar la información y eliminar contenido inapropiado, no podemos garantizar la exactitud absoluta de todos los reportes. Por lo tanto, el uso de esta plataforma y la confianza depositada en la información contenida aquí es bajo su propio riesgo. No nos hacemos responsables por las consecuencias, directas o indirectas, que pudieran derivarse de reportes erróneos o maliciosos. En caso de desacuerdo, podrás apelar usando el botón de apelación en la aplicación. Si consideras que tu apelación no ha sido resuelta de manera satisfactoria, dirígete al grupo de Facebook.</string>
     <string name="report">Se le redigirá a el grupo de Facebook, para que usted publique su reporte y nosotros verificar que el reporte sea verídico.</string>
+
+    <string name="link_github_report">https://github.com/ghxstbyte/lista-negra-cuba/issues?q=is:open+is:issue+label:bug</string>
+    <string name="link_github">https://github.com/ghxstbyte/lista-negra-cuba</string>
+    <string name="link_fb">https://www.facebook.com/groups/577666448442033/</string>
+    <string name="link_telegram">https://t.me/listanegracubana</string>
+    <string name="link_web">https://listanegracubana.blogspot.com/?m=1</string>
+    <string name="link_mail">mailto:listanegracubana@gmail.com</string>
+    <string name="link_telegram_group">https://t.me/+L4YfKDKoRORhNGNh</string>
+
+
+
+
+
+
+
 </resources>

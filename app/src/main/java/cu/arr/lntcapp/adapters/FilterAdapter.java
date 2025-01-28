@@ -1,9 +1,12 @@
 package cu.arr.lntcapp.adapters;
 
 import android.content.ActivityNotFoundException;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.Toast;
@@ -58,6 +61,9 @@ public class FilterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                     v -> {
                         sendEmailAppear(model.id);
                     });
+
+            // copiar numero
+            view.binding.getRoot().setOnClickListener(v -> copyToClipboard(model.id));
         }
     }
 
@@ -69,6 +75,17 @@ public class FilterAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     public void updateList(List<FilterItems> newList) {
         this.list = newList;
         notifyDataSetChanged();
+    }
+
+    private void copyToClipboard(String number) {
+        ClipboardManager clipboard = (ClipboardManager) mContext.getSystemService(Context.CLIPBOARD_SERVICE);
+        ClipData clip = ClipData.newPlainText("Copied Number", number);
+        if (clipboard != null) {
+            clipboard.setPrimaryClip(clip);
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
+                Toast.makeText(mContext, "Número copiado al portapapeles", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 
     private void sendEmailAppear(String number) {

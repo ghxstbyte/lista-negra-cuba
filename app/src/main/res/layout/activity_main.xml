@@ -1,160 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:id="@+id/coordinator">
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:id="@+id/coordinator">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior"
-        android:id="@+id/appbar">
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior"
+         android:id="@+id/appbar">
 
         <com.google.android.material.appbar.MaterialToolbar
-            android:layout_height="?attr/actionBarSize"
-            android:layout_width="match_parent"
-            android:id="@+id/toolbar" />
+             android:layout_height="?attr/actionBarSize"
+             android:layout_width="match_parent"
+             android:id="@+id/toolbar" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-        android:id="@+id/nested_scroll_view">
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+         android:id="@+id/nested_scroll_view">
 
         <LinearLayout
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            android:padding="20dp"
-            android:orientation="vertical">
+             android:layout_height="match_parent"
+             android:layout_width="match_parent"
+             android:padding="20dp"
+             android:orientation="vertical">
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:layout_margin="6dp"
-                app:cardElevation="0dp"
-                app:cardBackgroundColor="?attr/colorSurfaceVariant"
-                app:cardCornerRadius="40dp">
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:gravity="center_vertical"
+                 android:orientation="horizontal">
 
-                <LinearLayout
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"
-                    android:paddingEnd="10dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:paddingBottom="10dp"
-                    android:paddingStart="10dp"
-                    android:paddingTop="10dp">
+                <com.google.android.material.card.MaterialCardView
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     app:cardElevation="0dp"
+                     app:cardBackgroundColor="?attr/colorSurfaceContainerHigh"
+                     app:cardCornerRadius="40dp"
+                     android:layout_weight="1">
 
                     <LinearLayout
-                        android:layout_height="wrap_content"
-                        android:layout_width="match_parent"
-                        android:background="@drawable/border_radius_edittext"
-                        android:gravity="center_vertical"
-                        android:padding="3dp"
-                        android:layout_weight="1">
+                         android:layout_height="match_parent"
+                         android:layout_width="match_parent"
+                         android:gravity="center_vertical"
+                         android:orientation="horizontal"
+                         android:padding="3dp">
 
-                        <EditText
-                            android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
-                            android:imeOptions="actionDone"
-                            android:padding="16dp"
-                            android:singleLine="true"
-                            android:background="@android:color/transparent"
-                            android:hint="Insete el teléfono o tarjeta"
-                            android:textAppearance="?textAppearanceBodyMedium"
-                            android:maxLines="1"
-                            android:layout_weight="1"
-                            android:digits="0123456789"
-                            android:inputType="phone"
-                            android:id="@+id/edit_search" />
+                        <LinearLayout
+                             android:layout_height="wrap_content"
+                             android:layout_width="match_parent"
+                             android:gravity="center_vertical"
+                             android:padding="3dp"
+                             android:layout_weight="1">
 
-                        <Button
-                            android:layout_height="wrap_content"
-                            android:layout_width="wrap_content"
-                            app:icon="@drawable/ic_search"
-                            app:backgroundTint="?attr/colorSurface"
-                            app:iconTint="?attr/colorOnSurface"
-                            android:layout_marginLeft="10dp"
-                            style="?attr/materialIconButtonFilledStyle"
-                            android:id="@+id/btn_search" />
+                            <EditText
+                                 android:layout_height="wrap_content"
+                                 android:layout_width="match_parent"
+                                 android:imeOptions="actionDone"
+                                 android:padding="10dp"
+                                 android:singleLine="true"
+                                 android:background="@android:color/transparent"
+                                 android:hint="Inserte el teléfono o tarjeta"
+                                 android:textAppearance="?textAppearanceBodyMedium"
+                                 android:maxLines="1"
+                                 android:layout_weight="1"
+                                 android:digits="0123456789"
+                                 android:inputType="phone"
+                                 android:id="@+id/edit_search" />
+
+                            <Button
+                                 android:layout_height="wrap_content"
+                                 android:layout_width="wrap_content"
+                                 app:icon="@drawable/ic_search"
+                                 app:backgroundTint="?attr/colorSurface"
+                                 app:iconTint="?attr/colorOnSurface"
+                                 android:layout_marginLeft="10dp"
+                                 style="?attr/materialIconButtonFilledStyle"
+                                 android:id="@+id/btn_search" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
-                </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-            </com.google.android.material.card.MaterialCardView>
+                <Button
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     app:icon="@drawable/ic_settings"
+                     app:backgroundTint="?attr/colorSecondaryVariant"
+                     android:layout_marginLeft="10dp"
+                     app:iconTint="?attr/colorSurface"
+                     style="?attr/materialIconButtonFilledStyle"
+                     android:id="@+id/about" />
+
+            </LinearLayout>
 
             <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:gravity="center"
-                android:textAppearance="?textAppearanceTitleLarge"
-                android:layout_marginTop="20dp"
-                android:id="@+id/title"
-                android:textStyle="bold"
-                android:text="Reportes más recientes"
-                android:layout_gravity="center_horizontal" />
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:gravity="center"
+                 android:textAppearance="?textAppearanceTitleLarge"
+                 android:layout_marginTop="20dp"
+                 android:id="@+id/title"
+                 android:textStyle="bold"
+                 android:text="Reportes más recientes"
+                 android:layout_gravity="center_horizontal" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:layout_marginTop="20dp"
-                android:id="@+id/recycler" />
-
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:layout_marginTop="20dp"
+                 android:id="@+id/recycler" />
 
             <com.google.android.material.button.MaterialButton
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                app:icon="@drawable/ic_warning"
-                app:strokeColor="?attr/colorError"
-                android:layout_margin="6dp"
-                android:layout_gravity="center_horizontal"
-                app:iconTint="?attr/colorError"
-                android:textColor="?attr/colorError"
-                style="@style/Widget.Material3.Button.OutlinedButton.Icon"
-                android:id="@+id/reportar"
-                app:iconGravity="textStart"
-                android:text="Reportar" />
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 app:icon="@drawable/ic_warning"
+                 app:strokeColor="?attr/colorError"
+                 android:layout_margin="6dp"
+                 app:iconTint="?attr/colorError"
+                 android:textColor="?attr/colorError"
+                 style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                 android:layout_gravity="center_horizontal"
+                 android:id="@+id/reportar"
+                 app:iconGravity="textStart"
+                 android:text="Reportar" />
 
             <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:gravity="center"
-                android:background="@drawable/bg_tips"
-                android:textAppearance="?textAppearanceBodyMedium"
-                android:padding="10dp"
-                android:textColor="@android:color/black"
-                android:layout_marginTop="20dp"
-                android:text="Base de datos de números reportados por estafa de saldo móvil y saldo bancario en Cuba. Impulsado por la comunidad."
-                android:layout_gravity="center_horizontal" />
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:gravity="center"
+                 android:background="@drawable/bg_tips"
+                 android:textAppearance="?textAppearanceBodyMedium"
+                 android:padding="10dp"
+                 android:textColor="@android:color/black"
+                 android:layout_marginTop="20dp"
+                 android:text="Base de datos de números reportados por estafa de saldo móvil y saldo bancario en Cuba. Impulsado por la comunidad."
+                 android:layout_gravity="center_horizontal" />
 
             <LinearLayout
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:gravity="center_vertical"
-                android:background="@drawable/bg_fb"
-                android:padding="10dp"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:id="@+id/canal_facebook">
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:gravity="center_vertical"
+                 android:background="@drawable/bg_fb"
+                 android:padding="10dp"
+                 android:orientation="horizontal"
+                 android:layout_marginTop="10dp"
+                 android:id="@+id/canal_facebook">
 
                 <ImageView
-                    android:layout_height="50dp"
-                    android:layout_width="50dp"
-                    android:src="@drawable/ic_facebook"
-                    android:layout_margin="10dp" />
+                     android:layout_height="50dp"
+                     android:layout_width="50dp"
+                     android:src="@drawable/ic_facebook"
+                     android:layout_margin="10dp" />
 
                 <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:textAppearance="?textAppearanceBodySmall"
-                    android:textColor="?attr/colorPrimary"
-                    android:layout_weight="1"
-                    android:text="Únete a la comunidad en Facebook y reporta números y cuentas para agregar a la lista negra cubana. Unirme ahora." />
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:textAppearance="?textAppearanceBodySmall"
+                     android:textColor="?attr/colorPrimary"
+                     android:layout_weight="1"
+                     android:text="Únete a la comunidad en Facebook y reporta números y cuentas para agregar a la lista negra cubana. Unirme ahora." />
 
             </LinearLayout>
 
