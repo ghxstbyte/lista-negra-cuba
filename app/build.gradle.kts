@@ -24,8 +24,8 @@ android {
         applicationId = "cu.arr.lntcapp"
         minSdk = 23
         targetSdk = 34
-        versionCode = 2
-        versionName = "1.0.2"
+        versionCode = 3
+        versionName = "1.0.3"
         
         buildConfigField("String", "API_KEY", "\"${secrets["API_KEY"]}\"")
         

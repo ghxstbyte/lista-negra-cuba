@@ -94,9 +94,23 @@ public class DataProcess {
         return null;
     }
 
+    public static String getUpdateFromJson(Context c) {
+        try {
+            Gson gson = new Gson();
+            JsonObject jsonObject =
+                    gson.fromJson(new FileReader(getDirectory(c)), JsonObject.class);
+            return jsonObject.get("update").getAsString();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public static File getDirectory(Context context) {
         try {
-            File file = context.getDataDir();
+            //  File file = context.getDataDir();
+            File file = context.getExternalFilesDir("data");
+
             if (file != null && !file.exists()) {
                 file.mkdirs();
             }
